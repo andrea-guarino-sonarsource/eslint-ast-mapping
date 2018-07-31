@@ -1,23 +1,26 @@
 package impl;
 
-public class SourceLocationImpl {
+import api.Position;
+import api.SourceLocation;
+
+public class SourceLocationImpl implements SourceLocation{
   String source;
-  PositionImpl start;
-  PositionImpl end;
+  Position start;
+  Position end;
 
   public String source() {
     return source;
   }
 
-  public PositionImpl start() {
+  public Position start() {
     return start;
   }
 
-  public PositionImpl end() {
+  public Position end() {
     return end;
   }
 
-  public class PositionImpl {
+  public class PositionImpl implements Position {
     int line;
     int column;
     public Integer line() {

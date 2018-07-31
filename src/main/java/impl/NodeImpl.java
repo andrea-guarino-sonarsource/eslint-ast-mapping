@@ -1,15 +1,18 @@
 package impl;
 
-public abstract class NodeImpl {
+import api.Node;
+import api.SourceLocation;
+
+public class NodeImpl implements Node {
   String type;
-  SourceLocationImpl loc;
+  SourceLocation loc;
   int [] range;
 
   public String type() {
     return type;
   }
 
-  public SourceLocationImpl loc() {
+  public SourceLocation loc() {
     return loc;
   }
 

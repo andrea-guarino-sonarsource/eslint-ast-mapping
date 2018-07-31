@@ -1,7 +1,6 @@
 package impl;
 
-import java.io.Serializable;
+import api.Statement;
 
-public class StatementImpl extends NodeImpl implements Serializable {
-  public StatementImpl() {}
+public class StatementImpl extends NodeImpl implements Statement {
 }

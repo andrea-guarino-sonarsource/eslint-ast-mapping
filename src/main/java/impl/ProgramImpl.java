@@ -1,10 +1,13 @@
 package impl;
 
+import api.ExpressionStatement;
+import api.Program;
+
 import java.util.List;
 
-public class ProgramImpl extends NodeImpl {
+public class ProgramImpl extends NodeImpl implements Program {
   String sourceType;
-  List<ExpressionStatementImpl> body;
+  List<ExpressionStatement> body;
 
   public List<TokenImpl> tokens() {
     return tokens;
@@ -13,7 +16,7 @@ public class ProgramImpl extends NodeImpl {
   List<TokenImpl> tokens;
 
 
-  public List<ExpressionStatementImpl> body() {
+  public List<ExpressionStatement> body() {
     return body;
   }
 

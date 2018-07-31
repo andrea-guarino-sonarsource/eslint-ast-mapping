@@ -1,11 +1,14 @@
 package impl;
 
-public class TokenImpl {
+import api.SourceLocation;
+import api.Token;
+
+public class TokenImpl implements Token {
   String type;
   String value;
   int start;
   int end;
-  SourceLocationImpl loc;
+  SourceLocation loc;
   int [] range;
 
   public String type() {
@@ -24,7 +27,7 @@ public class TokenImpl {
     return end;
   }
 
-  public SourceLocationImpl loc() {
+  public SourceLocation loc() {
     return loc;
   }
 

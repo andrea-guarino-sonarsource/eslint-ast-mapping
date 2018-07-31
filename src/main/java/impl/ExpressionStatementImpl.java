@@ -1,9 +1,12 @@
 package impl;
 
-public class ExpressionStatementImpl extends StatementImpl {
-  IdentifierImpl expression;
+import api.Expression;
+import api.ExpressionStatement;
 
-  public IdentifierImpl expression() {
+public class ExpressionStatementImpl extends StatementImpl implements ExpressionStatement {
+  Expression expression;
+
+  public Expression expression() {
     return expression;
   }
 }
