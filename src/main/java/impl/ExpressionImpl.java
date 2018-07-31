@@ -1,6 +1,9 @@
 package impl;
 
-import api.Expression;
+import api.SourceLocation;
 
-public class ExpressionImpl extends NodeImpl implements Expression{
+public class ExpressionImpl extends NodeImpl {
+  public ExpressionImpl(String type, SourceLocation loc, int[] range) {
+    super(type, loc, range);
+  }
 }

@@ -8,6 +8,12 @@ public class NodeImpl implements Node {
   SourceLocation loc;
   int [] range;
 
+  public NodeImpl(String type, SourceLocation loc, int[] range) {
+    this.type = type;
+    this.loc = loc;
+    this.range = range;
+  }
+
   public String type() {
     return type;
   }

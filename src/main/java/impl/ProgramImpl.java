@@ -1,22 +1,28 @@
 package impl;
 
-import api.ExpressionStatement;
 import api.Program;
-
+import api.SourceLocation;
+import api.Statement;
+import api.Token;
 import java.util.List;
 
 public class ProgramImpl extends NodeImpl implements Program {
   String sourceType;
-  List<ExpressionStatement> body;
+  List<Statement> body;
+  List<Token> tokens;
 
-  public List<TokenImpl> tokens() {
+  public ProgramImpl(String type, SourceLocation loc, int[] range, String sourceType, List<Statement> body, List<Token> tokens) {
+    super(type, loc, range);
+    this.sourceType = sourceType;
+    this.body = body;
+    this.tokens = tokens;
+  }
+
+  public List<Token> tokens() {
     return tokens;
   }
 
-  List<TokenImpl> tokens;
-
-
-  public List<ExpressionStatement> body() {
+  public List<Statement> body() {
     return body;
   }
 

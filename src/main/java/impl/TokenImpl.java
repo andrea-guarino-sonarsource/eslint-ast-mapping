@@ -11,6 +11,15 @@ public class TokenImpl implements Token {
   SourceLocation loc;
   int [] range;
 
+  public TokenImpl(String type, String value, int start, int end, SourceLocation loc, int[] range) {
+    this.type = type;
+    this.value = value;
+    this.start = start;
+    this.end = end;
+    this.loc = loc;
+    this.range = range;
+  }
+
   public String type() {
     return type;
   }

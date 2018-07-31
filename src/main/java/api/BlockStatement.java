@@ -2,7 +2,6 @@ package api;
 
 import java.util.List;
 
-public interface Program extends Node {
+public interface BlockStatement extends Statement {
   List<Statement> body();
-  String sourceType();
 }
